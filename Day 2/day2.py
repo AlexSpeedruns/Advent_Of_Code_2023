@@ -33,7 +33,7 @@ def part1(lines):
 
 def part2(lines):
     total = 0
-    for _, line in enumerate(lines):
+    for line in lines:
         sets = line.split(":")[1].split(";")
         max_colors = {"red": 0, "green": 0, "blue": 0}
         for set in sets:
