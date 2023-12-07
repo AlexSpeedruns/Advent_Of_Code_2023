@@ -57,7 +57,7 @@ def part2(lines):
 
     print(total)
 
-def calculate_score(cards, card_value_map, updated_cards=[]):
+def calculate_score(cards, card_value_map, updated_cards=None):
     if updated_cards:
         counter = Counter([card for card in updated_cards])
     else:
