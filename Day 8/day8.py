@@ -58,7 +58,7 @@ def part2(lines):
 
     for i in range(len(current_nodes)):
         step_count = 0
-        while True:
+        while current_nodes[i][-1] != 'Z':
             if current_step == len(steps):
                 current_step = 0
             step = steps[current_step]
@@ -71,9 +71,7 @@ def part2(lines):
             step_count += 1
             current_step += 1
 
-            if current_nodes[i][-1] == 'Z':
-                step_counts.append(step_count)
-                break
+        step_counts.append(step_count)
     
     print(math.lcm(*step_counts))
 
