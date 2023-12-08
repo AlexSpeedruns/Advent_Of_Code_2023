@@ -56,7 +56,7 @@ def part2(lines):
     step_counts = []
     current_step = 0
 
-    for i, node in enumerate(current_nodes):
+    for i in range(len(current_nodes)):
         step_count = 0
         while True:
             if current_step == len(steps):
