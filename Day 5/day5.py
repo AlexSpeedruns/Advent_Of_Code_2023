@@ -92,12 +92,7 @@ def part2(lines):
             else:    
                 narrowed_seeds.append((seed_lower, seed_upper))
 
-    lowest = sys.maxsize
-    for seed in narrowed_seeds:
-        if seed[0] < lowest:
-            lowest = seed[0]
-    print(lowest)
-
+    print(min(narrowed_seeds)[0])
 
 def fill_list(list, section):
     for line in section.split("\n")[1:]:
