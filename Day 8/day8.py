@@ -54,10 +54,10 @@ def part2(lines):
             current_nodes.append(start_node)
 
     step_counts = []
-    current_step = 0
 
     for i in range(len(current_nodes)):
         step_count = 0
+        current_step = 0
         while current_nodes[i][-1] != 'Z':
             if current_step == len(steps):
                 current_step = 0
