@@ -48,17 +48,13 @@ def part2(lines):
         right = node.split()[3][:-1]
         nodes[start] = (left, right)
 
-    current_nodes = []
-    for start_node in nodes.keys():
-        if start_node[-1] == 'A':
-            current_nodes.append(start_node)
-
+    current_nodes = [node for node in nodes if node.endswith("A")]
     step_counts = []
 
     for i in range(len(current_nodes)):
         step_count = 0
         current_step = 0
-        while current_nodes[i][-1] != 'Z':
+        while not current_nodes[i].endswith('Z'):
             if current_step == len(steps):
                 current_step = 0
             step = steps[current_step]
